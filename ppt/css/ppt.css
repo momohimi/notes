@@ -1,0 +1,14 @@
+body code{
+	font-size: 18px;
+}
+#container .slide{
+	background-image: url('../images/logo.png');
+	background-repeat: no-repeat;
+	background-size: 120px;
+	background-position: 98% 4px;
+}
+
+.slide-wrapper hgroup, 
+.slide-wrapper article{
+	text-align: left;
+}
