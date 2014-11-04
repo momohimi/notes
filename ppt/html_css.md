@@ -47,7 +47,7 @@ files: /css/ppt.css
 	* http 或 https 
 	* 动态和静态
 
-* ## 内嵌浏览器内核的APP {:&.fadeIn}
+* ## 内嵌浏览器内核的APP
 	* webview 
 	* hybird app
 
