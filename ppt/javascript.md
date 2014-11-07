@@ -80,6 +80,7 @@ files: /css/ppt.css
 	}
 	welcome();
 	```
+
 * ## 说明：
 	* Js语句以一个分号结尾；
 	* 使用```var```关键字定义变量；
@@ -142,16 +143,107 @@ files: /css/ppt.css
 
 [slide]
 
-# DOM操作
+# 一些日常的JS使用
+（基于jQuery）
 
 [slide]
 
-# 事件处理
+## DOM操作
+
+* ### 获取DOM元素
+ 	* jQuery选择器语法：```var obj = $('selector')```
+	* ID选择器：```var dom = $('#id')```
+	* 类选择器：```var dom = $('.class')```
+	* 标签选择器：```var dom = $('div')```
+	* <a href="http://www.w3school.com.cn/jquery/jquery_ref_selectors.asp" target="_blank">jQuery选择器手册</a>
+ 
+* ### 设置或获取DOM内容
+	* 设置或返回所选元素的文本内容：```dom.text([value])```
+	* 设置或返回所选元素的内容（包括 HTML 标记）：```dom.html([value])```
+	* 设置或返回表单字段的值：```dom.val([value])```
+ 
+* ### 设置或获取DOM属性
+	```dom.attr([value])```
+
+----
 
 [slide]
 
-# AJAX
+## 事件
+
+* 绑定事件
+	* 语法：```dom.on('eventName', function(event){})```
+	* 说明
+		* eventName：事件名称，如'click'
+		* event: 事件对象，描述触发这次事件的具体信息
+
+* 常用事件
+	* 鼠标事件: 点击click, 悬停mouseover
+	* 键盘事件：键盘按下keydown, 键盘弹起keyup
+	* 焦点：获取焦点focus, 失去焦点blur
+
+----
+
+[slide]
+
+## AJAX
+
+* 代码
+	```script
+	$.ajax({
+		type: 'GET/POST', //HTTP method
+		url: 'path/to/target', //目标URL
+		data: { key:value }, //数据
+		dataType: 'json/html/text', //希望返回的数据类型
+		success: function(result){}, //正常返回处理函数
+		error: function(err){} //错误处理函数（超时，网络中断等）
+	});
+	```
+	
+----
+
+[slide]
+
+## 表单验证
+
+* 外挂式：利用form的submit事件
+	* 代码：
+	```script
+	form.on('submit', function(event){
+		//执行验证
+
+		//如果验证不同过，通过return false阻止提交
+		return false;
+	});
+	```
+
+* 主动式：使用JS验证后提交表单
+	* 代码：
+	```script
+	button.on('click', function(event){
+		//执行验证
+
+		//如果验证通过，提交表单
+		form.submit();
+	});
+	```
+----
 
 [slide]
 
 # 推荐阅读
+
+[slide]
+
+## 基本款
+
+* <a href="http://item.jd.com/10951037.html" target="_blank">书籍：JavaScript高级程序设计（第3版）</a>
+* <a href="http://item.jd.com/10960689.html" target="_blank">书籍：图灵程序设计丛书：jQuery实战（第2版）</a>
+
+## 进阶款
+
+* <a href="http://item.jd.com/10974436.html" target="_blank">书籍：JavaScript权威指南（第6版）</a>
+* <a href="http://item.jd.com/11193885.html" target="_blank">书籍：编写可维护的JavaScript  </a>
+* <a href="http://item.jd.com/11355978.html" target="_blank">书籍：深入浅出Node.js   </a>
+
+----
