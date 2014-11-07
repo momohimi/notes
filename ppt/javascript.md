@@ -70,7 +70,7 @@ files: /css/ppt.css
 
 [slide]
 
-* ## 代码：
+* ## 代码：{:&.fadeIn}
 
 	```script
 	function welcome() {
@@ -96,7 +96,7 @@ files: /css/ppt.css
 
 [slide]
 
-* ## JSON
+* ## JSON {:&.fadeIn}
 	JSON(Javascript Object Notation)，它是ECMA-262 第3版的一个子集，构建于两种结构：
 	* “名称/值”对的集合，不同的语言中，它被理解为对象（object），结构（struct），哈希表（hash table），有键列表（keyed list），或者关联数组 （associative array）等。
 	* 值的有序列表，在大部分语言中，被理解为数组(array)。
@@ -119,7 +119,7 @@ files: /css/ppt.css
 
 [slide]
 
-* 语法
+* 语法 {:&.fadeIn}
 	```script
 	function functionName(arg0, arg1, ...., argN){
 		//statements
@@ -147,10 +147,10 @@ files: /css/ppt.css
 （基于jQuery）
 
 [slide]
+ 
+## DOM操作 
 
-## DOM操作
-
-* ### 获取DOM元素
+* ### 获取DOM元素 {:&.fadeIn}
  	* jQuery选择器语法：```var obj = $('selector')```
 	* ID选择器：```var dom = $('#id')```
 	* 类选择器：```var dom = $('.class')```
@@ -171,7 +171,7 @@ files: /css/ppt.css
 
 ## 事件
 
-* 绑定事件
+* 绑定事件 {:&.fadeIn}
 	* 语法：```dom.on('eventName', function(event){})```
 	* 说明
 		* eventName：事件名称，如'click'
@@ -199,14 +199,14 @@ files: /css/ppt.css
 		error: function(err){} //错误处理函数（超时，网络中断等）
 	});
 	```
-	
+
 ----
 
 [slide]
 
 ## 表单验证
 
-* 外挂式：利用form的submit事件
+* 外挂式：利用form的submit事件 {:&.fadeIn}
 	* 代码：
 	```script
 	form.on('submit', function(event){
